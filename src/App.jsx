@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
+import Formulario from './components/Formulario'
 
 const App = () => {
   return (
@@ -8,7 +9,7 @@ const App = () => {
       <h1>Buscador de bebidas</h1>
     </header>
       <Container className='mt-5'>
-        1
+        <Formulario/>
       </Container>
     </>
   )
