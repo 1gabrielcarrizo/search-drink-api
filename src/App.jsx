@@ -2,16 +2,19 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import Formulario from './components/Formulario'
 import { CategoriasProvider } from './context/CategoriasProvider'
+import { BebidasProvider } from './context/BebidasProvider'
 
 const App = () => {
   return (
     <CategoriasProvider>
-      <header className='py-5'>
-        <h1>Buscador de bebidas</h1>
-      </header>
-      <Container className='mt-5'>
-        <Formulario />
-      </Container>
+      <BebidasProvider>
+        <header className='py-5'>
+          <h1>Buscador de bebidas</h1>
+        </header>
+        <Container className='mt-5'>
+          <Formulario />
+        </Container>
+      </BebidasProvider>
     </CategoriasProvider>
   )
 }
