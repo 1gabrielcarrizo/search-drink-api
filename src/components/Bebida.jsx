@@ -1,22 +1,12 @@
 import React from 'react'
 import { Button, Card, Col } from 'react-bootstrap'
+import useBebidas from '../hooks/useBebidas'
 
 const Bebida = ({ bebida }) => {
-    return (
-        // <Col md={6} lg={3} className='mb-4'>
-        //     <Card className='mb-4 h-100'>
-        //         <Card.Img
-        //             variant='top'
-        //             src={bebida.strDrinkThumb}
-        //             alt={`Imagen de ${bebida.strDrink}`}
-        //         />
-        //         <Card.Body>
-        //             <Card.Title>{bebida.strDrink}</Card.Title>
-        //             <Button variant='warning' className='w-100 text-uppercase'>Ver receta</Button>
-        //         </Card.Body>
-        //     </Card>
-        // </Col>
 
+    const {handleModalClick, handleBebidaIdClick} = useBebidas()
+
+    return (
         <Col md={6} lg={3} className='mb-4'>
             <Card className='mb-4 h-100'>
                 <Card.Img
@@ -29,7 +19,10 @@ const Bebida = ({ bebida }) => {
                         <Card.Title>{bebida.strDrink}</Card.Title>
                     </div>
                     <div className='mt-auto'>
-                        <Button variant='warning' className='w-100 text-uppercase'>
+                        <Button variant='warning' className='w-100 text-uppercase' onClick={() => {
+                            handleModalClick()
+                            handleBebidaIdClick(bebida.idDrink)
+                        }}>
                             Ver receta
                         </Button>
                     </div>
