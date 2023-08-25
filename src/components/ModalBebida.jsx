@@ -22,10 +22,10 @@ const ModalBebida = () => {
     return (
         !cargando && (
             <Modal show={modal} onHide={handleModalClick}>
-                <Image src={receta.strDrinkThumb} alt={`Imagen de la receta ${receta.strDrink}`} />
-                <Modal.Header>
+                <Modal.Header closeButton>
                     <Modal.Title>{receta.strDrink}</Modal.Title>
                 </Modal.Header>
+                <Image src={receta.strDrinkThumb} alt={`Imagen de la receta ${receta.strDrink}`} />
                 <Modal.Body>
                     <div className='p-3'>
                         <h2>Instrucciones</h2>

@@ -55,7 +55,7 @@ const Formulario = () => {
                 </Col>
             </Row>
 
-            <Row className='justify-content-end'>
+            <Row className='justify-content-end mt-4'>
                 <Col md={3}>
                     <Button variant='danger' className='text-uppercase w-100' type='submit'>
                         Buscar categoria
